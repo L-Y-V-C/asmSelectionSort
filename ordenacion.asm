@@ -46,16 +46,6 @@ j loop # change completed; now repeat
 
 change:
 
-#la $a0,endl
-#li $v0,4
-#syscall
-#la $a0,textMin
-#li $v0,4
-#syscall
-#la $a0,0($t0)
-#li $v0,1
-#syscall
-
 addi $s4,$zero,1 # for print
 
 lw $t6,0($t5) # t6 = valor minimo (direccion)
@@ -73,9 +63,6 @@ addi $t1,$t8,0 # initialize index i = j
 lw $t0,0($s3) # initialize minimum in t0 to A[j]
 addi $t5,$s3,0 # save adress of minimum in $t5
 j loop
-
-
-
 
 done: # continuation of the program
 
@@ -115,7 +102,6 @@ syscall
 j printLoop
 
 fin:
-
 
 li $v0,10
 syscall
